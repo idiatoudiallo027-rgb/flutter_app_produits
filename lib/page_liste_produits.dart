@@ -29,7 +29,7 @@ class ListProduits extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Liste de Produits")),
       body: ListView.builder(
-        itemCount: produits.length, // Nombre total d'éléments dans la liste
+        itemCount: produits.length,
         itemBuilder: (context, index) {
           final produit = produits[index];
           return Card(
