@@ -6,7 +6,6 @@ import 'page_details_produit.dart';
 class ListProduits extends StatelessWidget {
   ListProduits({super.key});
 
-  // Notre liste de données (objets de type Produit)
   final List<Produit> produits = [
     Produit(
       nom: "Ordinateur Portable",
@@ -32,8 +31,7 @@ class ListProduits extends StatelessWidget {
       body: ListView.builder(
         itemCount: produits.length, // Nombre total d'éléments dans la liste
         itemBuilder: (context, index) {
-          final produit =
-              produits[index]; // On récupère le produit à l'index actuel
+          final produit = produits[index];
           return Card(
             elevation: 3,
             margin: EdgeInsets.all(10),
@@ -46,7 +44,6 @@ class ListProduits extends StatelessWidget {
               trailing: ElevatedButton(
                 child: Text("Voir"),
                 onPressed: () {
-                  // ICI SE FAIT L'ÉCHANGE DE DONNÉES :
                   // On navigue vers DetailsProduit en lui passant le "produit" cliqué
                   Navigator.push(
                     context,
