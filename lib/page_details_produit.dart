@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'models/produit.dart';
 
 class DetailsProduit extends StatelessWidget {
-  // On déclare une variable de type Produit qui va stocker le produit reçu
   final Produit produit;
 
   const DetailsProduit({super.key, required this.produit});
@@ -11,9 +10,7 @@ class DetailsProduit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(produit.nom),
-      ), // Le titre de la page est le nom du produit
+      appBar: AppBar(title: Text(produit.nom)), //
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
